@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Env
+.snowtrail_env/
+
+# VSCode
+.vscode/
+
+# Streamlit Secrets
+.streamlit/secrets.toml
+
+# Database
+default.sqlite
+
+# Courses large files
+courses/**/*.pdf
+courses/**/*.mp4
+courses/**/*.mp3
