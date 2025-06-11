@@ -5,7 +5,7 @@ streamlit_pdf_viewer
 # Config & Secrets
 python-dotenv==1.0.1
 
-# Snowflake (含 ML 功能)
+# Snowflake (含 ML 功能，含 snowflake-connector-python)
 snowflake[ml]
 
 # AWS Textract PDF 处理
@@ -16,6 +16,8 @@ amazon-textract-textractor==1.4.4
 
 # LLM/RAG 组件
 langchain_community>=0.0.26,<0.1
+sentence-transformers
+chromadb
 
 # 语音转录 & 视频
 deepgram-sdk>=3.1.0,<4.0.0
