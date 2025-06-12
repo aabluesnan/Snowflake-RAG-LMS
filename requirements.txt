@@ -1,5 +1,5 @@
 # UI & App Framework
-streamlit==1.33.0
+streamlit>=1.35,<2.0
 streamlit_pdf_viewer==0.0.23
 
 # Config & Secrets
