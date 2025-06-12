@@ -118,9 +118,17 @@ class DatabaseManager:
             FROM {table_name}
             WHERE lecture_name = '{lecture_name}'
             """
-            results = self._run_query(query, return_results=True)
-            for result in results:
-                unique_files.add(result[0])
+
+            try:
+                results = self._run_query(query, return_results=True)
+                for result in results:
+                    unique_files.add(result[0])
+            except Exception as e:
+                if "42S02" in str(e): # Table does not exist -> skip
+                    print(f"Table {table_name} does not exist, skipping.")
+                    continue
+                else:
+                    raise
 
         return list(unique_files)
 
